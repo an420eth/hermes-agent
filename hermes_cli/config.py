@@ -1353,12 +1353,12 @@ def config_command(args):
         key = getattr(args, 'key', None)
         value = getattr(args, 'value', None)
         if not key or not value:
-            print("Usage: hermes config set KEY VALUE")
+            print('Usage: hermes config set "KEY" "VALUE"')
             print()
             print("Examples:")
-            print("  hermes config set model anthropic/claude-sonnet-4")
-            print("  hermes config set terminal.backend docker")
-            print("  hermes config set OPENROUTER_API_KEY sk-or-...")
+            print('  hermes config set "model" "anthropic/claude-sonnet-4"')
+            print('  hermes config set "terminal.backend" "docker"')
+            print('  hermes config set "OPENROUTER_API_KEY" "sk-or-..."')
             sys.exit(1)
         set_config_value(key, value)
     
